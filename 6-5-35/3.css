@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10%;
+}
+
+.container{
+    height: 30em;
+    width: 30em;;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.text{
+    height: 4em;
+    width: 25em;
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+
+}
