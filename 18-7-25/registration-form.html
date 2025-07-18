@@ -1,190 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration-Form</title>
+  <style>
     body {
-      background-color: #fafafc;
+        
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: #f2f2f2;
       display: flex;
       justify-content: center;
-      margin-top: 40px;
-    }
-    
-    .container{
-        border-radius: 20px;
-        border-style: solid;
-        border-width: 3px;
-        border-color: rgb(45, 45, 71);
-        background-color: rgb(107, 76, 229);
-        color: aliceblue;
-        padding-left: 20px;
-        padding-right: 20px;
-        
-        
+      align-items: center;
+      background-image: url('bgg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
-    .input-box{
-        width: 100%;
-        margin-top: 5px;
-        margin-left: 5px;
-        border-radius: 5px;
-        border-style: none;
-        margin-bottom: 5px;
-        height: 30px;
-        display: flex;
-        text-align: center;
-
-    }
-    /* ------------------ */
-    .radio{
-        display: flex;
-       flex-direction: column;
-    }
-    
-    
-    .name-info{
-        display: flex;
-        margin: 15px;
-        flex-wrap: wrap;
-        
-    }
-    
-    .register{
-        display: flex;
-        justify-content: center;
-
-    }
-    .column{
-        margin-left: 10px;
+    .form-container {
+      background: #dfcdf2;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
     }
 
-    .buttons{
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: large;
+        width: 120px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1; 
+      margin-right: 10px;
+      width: 100%;
+    }
+
+    .form-group.double input {
+      width: 100%;
+    }
+
+    .form-group.double input:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #420983;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #350358;
+    }
+    select{
+        width: 180px;
         border-style: none;
         height: 35px;
-        border-radius: 7px;
-        background-color: rgb(184, 157, 237);
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        color: #fafafc;
-        font-weight: 700;
-        padding: 6px 25px 6px 25px;
+        border-radius: 5px;
+    }
+    .form-group .second-column{
+        width: 100px;
 
     }
 
-    .buttons:hover{
-        background-color: rgb(50, 29, 92); ;
-    }
-
-    .name-fields {
-  display: flex;
-  gap: 0.2px; /* spacing between fields */
-  flex: 1;
-}
-
-.name-fields .input-box {
-  width: 100%; /* make both inputs share space equally */
-}
-    </style>
+  </style>
 </head>
 <body>
-    
-    <form ><div class="container">
-        <div class="register"><h1>Registration-Form</h1></div>
-        <div class="name-info">
-        <label for="">Full Name :</label>
-        <div class="name-fields"><input class="input-box" type="text" placeholder="First Name">
-        <input class="input-box" type="text" placeholder="Last Name" >
-        </div>
-        </div>
-    
-        <div class="name-info">
-        <label >Email Address :</label>
-        <input class="input-box" type='email' placeholder="Enter Email Address">
-        </div>
 
-         <div class="name-info">
-        <label>Phone Number :</label>
-        <input class="input-box" type="number" placeholder="Enter Phone Number">
-        <div class="column">
-        <label>Birth Date</label>
-        <input class="input-box" type="date">
-        </div><label >   
-        </div>
+  <div class="form-container">
+    <form>
+        <h1 style="display: flex ; align-items: center;  justify-content: center;">Registration-Form</h1>
+
+      <!-- Name -->
+      <div class="form-group double">
+        <label for="first-name">User Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="First Name" />
+        <input type="text" id="last-name" name="last-name" placeholder="Last Name" />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" />
+      </div>
+
+      <!-- Phone and birthdate -->
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="1234567890" />
+        <label class="second-column" for="password">Birth Date:</label>
+        <input type="date" class="date-val" />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" />
+      </div>
 
 
-         <div class="name-info">
-            <label >Gender :</label>
-            <div class="radio">
-                <div>
-                    <input type="radio" id="check" class="male">
-                    <label for="check">Male</label>
-
-                </div>
-                <div>
-                    <input type="radio" id="check" class="male">
-                    <label for="check">Female</label>
-
-                </div>
-                <div>
-                    <input type="radio" id="check" class="male">
-                    <label for="check">Other</label>
-
-                </div>
-               
+       <!-- Gender -->
+      <div class="form-group">
+        <label for="password">Gender:</label>
+        <select name="gender" id="male">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        </select>
        
-        </div>
-
-
-         
-           
         
+      </div>
+      <!-- Address -->
+      <div class="form-group">
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" placeholder="Enter Address" />
+      </div>
 
-    </div>
+      
+      <!-- country and city -->
+      <div class="form-group">
+        <label for="phone">Select Counrty:</label>
+        <select name="Country" id="country" style="margin-right: 20px;">
+            <option value="India">India</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Nepal">Nepal</option>
+        </select>
+        <label for="city" style="width: 89px;">City:</label>
+        <input type="text" placeholder="Enter City">
+      </div>
+          <!-- Region and pincode -->
+      <div class="form-group">
+        <label for="Region">Region:</label>
+        <input type="text" id="Region" placeholder="Enter Region" />
+        <label class="second-column" class="PIN-CODE" for="password">PIN CODE:</label>
+        <input type="text" class="pinCode" maxlength="6" placeholder="Enter PIN CODE" />
+      </div>
 
-    <div class="name-info">
-            <label for="">Address: </label>
-            <input class="input-box" type="text" name="" id="">
-            
-        </div>
-
-
-         <div class="name-info">
-            <label for="">Select Country: </label>
-            <select name="country" id="country">
-                <option value="india">India</option>
-                <option value="india">America</option>
-                <option value="india">UK</option>
-                <option value="india">Bangladesh</option>
-
-
-            </select></div>
-
-
-     <div class="name-info">
-        <label>City :</label>
-        <input type="text" placeholder="Enter city">
-        <div class="column">
-        <label>Pin Code</label>
-        <input type="number">
-        </div><label >   
-        </div>
-
-        <div class="name-info">
-        <input type="checkbox" name="terms" id="terms">
-        <label for="terms">I agree to the terms ans conditions</label>  
-        </div>
-
-         <div class="name-info" style="justify-content: center;">
-      <button class="buttons" type="submit">Submit</button>
-    </div>
-
-        
+      <!-- Submit Button -->
+      <div class="button-position" style="display: flex; align-items: center; justify-content: center;" >
+        <label></label>
+        <button type="submit">Submit</button>
+      </div>
 
     </form>
-    
+  </div>
+
 </body>
 </html>
