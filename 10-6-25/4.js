@@ -43,3 +43,5 @@ if (num > 4) {
 //5.  Change background color based on user input
 let color = prompt("Enter a color:");
 document.body.style.backgroundColor = color;
+
+console.log("hello")
