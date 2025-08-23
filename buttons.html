@@ -19,11 +19,14 @@
     margin: 10px;
 
     transition: box-shadow 0.15s;
+    will-change: filter;
+    transition: filter 400ms;
 
 }
 /* pseudo class */
 .Tweet:hover{
-    box-shadow: 10px 10px black;
+    /* box-shadow: 10px 10px black; */
+     filter: drop-shadow(0 0 2em #646cffaa);
 
 
 }
@@ -52,6 +55,7 @@
 .joinBtn:hover{
     background-color:rgb(64, 130, 223) ;
     color: aliceblue;
+     filter: drop-shadow(0 0 2em #646cffaa);
 
 }
 

@@ -20,6 +20,8 @@ function asyncFunc2(){
 };
 
 console.log("fetching data1");
+
+
 asyncFunc().then((res)=>{
   console.log("fetching data2");
   asyncFunc2().then((res)=>{
